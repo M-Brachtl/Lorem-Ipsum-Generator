@@ -1,7 +1,8 @@
+import os
 import random
 
-def words_list(w_r,wr_value="Fnew2/d8w2-8ed."):
-    with open("words.txt", w_r) as soubor:
+def words_list(w_r,wr_value="Fnew2/d8w2-8ed.",file_n="words.txt"):
+    with open(file_n, w_r) as soubor:
         if (w_r == "w" or w_r == "a") and not wr_value == "Fnew2/d8w2-8ed.":
             soubor.write(wr_value)
         elif w_r == "r":
@@ -25,8 +26,13 @@ elif action == "generovat":
     words = list(set(words_list("r").split()))
     output = ""
     sentence = "Lorem ipsum"
-    for _ in range(int(input("Kolik vět chceš napsat (jedna věta má 3-7 slov): "))):
-        for word_index in range(random.randint(3,7)):
+    words_range = input("Napište rozsah počtu slov v jedné větě. Např. '2-5' : ").replace("-"," ").split()
+    words_range[0] = int(words_range[0])
+    words_range[1] = int(words_range[1])
+    if words_range[0]>words_range[1]:
+        words_range.reverse()
+    for _ in range(int(input("Kolik vět chceš napsat: "))):
+        for word_index in range(random.randint(words_range[0],words_range[1])):
             if word_index == 0 and not sentence:
                 sentence += " "+words[random.randint(0,len(words)-1)].capitalize()
             else:
@@ -34,4 +40,7 @@ elif action == "generovat":
         output += sentence + "."
         sentence = ""
     print("\n"+output+"\n")
+    words_list("w",output,"output.txt")
+    osCommandString = "notepad.exe output.txt"
+    os.system(osCommandString)
     
