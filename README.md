@@ -1,0 +1,2 @@
+Tato verze generuje text složený z náhodně uspořádaných latinských slov. Uživatel má možnost si zvolit rozmezí, v jakém má být počet slov ve větě, a také zvolit počet vět. Výstup se zapíše do souboru output.txt, který se okamžitě otevře v Poznámkovém bloku.   
+Uživatel může přidávat další slova, ze kterých bude vybíráno. Slova se ukládají do souboru words.txt na jediný řádek oddělena mezerou. Slova mohou být uspořádaná v libovolně dlouhém textu, ve kterém nejsou odstavce ani interpunkční známénka s výjimkou čárky a tečky.
