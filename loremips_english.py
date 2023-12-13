@@ -12,7 +12,7 @@ def words_list(w_r,wr_value="Fnew2/d8w2-8ed.",file_n="words_english.txt"):
             raise ValueError()
     soubor.close()
 ########################################
-mode = input("Vyber, co chceš dělat: x-konec, 0-přidávat slova, 1-tvořit nové větné skladby, 2-generovat ")
+mode = input("Vyber, co chceš dělat: x-konec, 0-přidávat slova, 1-generovat ")
 ## Definice větné skladby
 words_order = [(0,1,0),(4,1,0),(6,0,1,0),(4,5,1),(4,1,2),(6,0,5,1,2)]
 # 0 - noun, 1 - verb, 2 - adverb, 3 - adjective, 4 - pronoun, 5 - verbs with preposition, 6 - possesive pronoun
@@ -39,7 +39,7 @@ while not mode == "x":
         print(file_content)
         
         words_list("w",file_content)
-    elif mode == "2":
+    elif mode == "1":
         file_content = words_list("r")
         for type in range(len(file_content)):
             if not type == 5:
