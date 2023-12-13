@@ -8,6 +8,7 @@ Do Latinské verze patří tyto soubory:
 - words.txt (slouží k ukládání slovíček)
 - output.txt (soubor, do kterého se zapíše výstup kódu)   
 <br>
+
 ## Anglická verze
 Tato verze generuje náhodný text v angličtině z existujících slov uložených v souboru words.txt. V rámci něj jsou uspořádány dle druhu, jak je popsáno v komentáři u .py souboru. Kód skládá věty dle předdefinovaných variant skladby vět. Některé věty mohou být takto správně, byť s nesmyslným významem.   
 Uživatel má možnost přidávat další slovíčka. Musí dodržovat zvolený styl věty, kterou bude zapisovat, aby generátor správně slovíčka rozřadil podle typu. <b>Přidávejte pouze podstatná jména, přídavná jména, příslovce a slovesa.</b>   
